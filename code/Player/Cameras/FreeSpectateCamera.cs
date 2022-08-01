@@ -44,6 +44,11 @@ public class FreeSpectateCamera : CameraMode, ISpectateCamera
 
 		Position = Vector3.Lerp( Position, _targetPos, 10 * RealTime.Delta * (1 - LerpMode) );
 		Rotation = Rotation.Slerp( Rotation, _targetRot, 10 * RealTime.Delta * (1 - LerpMode) );
+
+		if ( Input.Released( InputButton.Use ) )
+		{
+			Player.PosessProp( Position, Rotation );
+		}
 	}
 
 	public override void BuildInput( InputBuilder input )
