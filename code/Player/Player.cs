@@ -102,7 +102,7 @@ public partial class Player : AnimatedEntity
 				SetMaterialGroup( "skin1" );
 
 			var head = new AnimatedEntity();
-			head.Model = Model.Load( useLightSkinTone ? "models/humans/heads/adam/adam.vmdl" : "models/humans/heads/frank/frank.vmdl" );
+			head.Model = Model.Load( useLightSkinTone ? "models/humans/heads/frank/frank.vmdl" : "models/humans/heads/adam/adam.vmdl" );
 			head.EnableHideInFirstPerson = true;
 			head.EnableShadowInFirstPerson = true;
 			head.SetParent( this, true );
